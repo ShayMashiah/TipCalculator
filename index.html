@@ -29,18 +29,18 @@
       <div class="selection-container">
         <p>Select Tip %</p>
         <div class="tip-buttons">
-          <button class="tip-button" value='5' onclick="onButtonClicked(event)">5%</button>
-          <button class="tip-button" value='10' onclick="onButtonClicked(event)">10%</button>
-          <button class="tip-button" value='15' onclick="onButtonClicked(event)">15%</button>
-          <button class="tip-button" value='25' onclick="onButtonClicked(event)">25%</button>
-          <button class="tip-button" value='50' onclick="onButtonClicked(event)">50%</button>
-          <input type="text" class="custom-tip" placeholder="Custom" oninput="onButtonClicked(event)">
+          <button class="tip-button" value='5' onclick="onSelectTip(event)">5%</button>
+          <button class="tip-button" value='10' onclick="onSelectTip(event)">10%</button>
+          <button class="tip-button" value='15' onclick="onSelectTip(event)">15%</button>
+          <button class="tip-button" value='25' onclick="onSelectTip(event)">25%</button>
+          <button class="tip-button" value='50' onclick="onSelectTip(event)">50%</button>
+          <input type="text" class="custom-tip" id="custom-tip" placeholder="Custom" oninput="onTipChange(event)">
         </div>
       </div>
 
       <div class="people-container">
         <p>Number of People</p>
-        <input type="number" id="num-of-people-input" class="people-input" placeholder="0" oninput="onPeopleChange()">
+        <input type="number" id="num-of-people-input" class="people-input" placeholder="0" oninput="onNumOfPeopleChange(event)">
       </div>
     </div>
   

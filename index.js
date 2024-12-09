@@ -4,21 +4,24 @@ let tipPercentage;
 
 const onBillChange = (e) => {
   bill = parseInt(e.target.value);
+  console.log(bill)
   updateDashboard();
 };
 
 const onNumOfPeopleChange = (e) => {
   numOfPeople = parseInt(e.target.value);
+  console.log(numOfPeople)
   updateDashboard();
 };
 
 const onTipChange = (e) => {
   tipPercentage = parseInt(e.target.value);
+  console.log(tipPercentage)
   updateDashboard();
 };
 
 const onSelectTip = (e) => {
-  const tipPercentageInput = document.getElementById("tip-percentage-input");
+  const tipPercentageInput = document.getElementById("custom-tip");
   tipPercentageInput.value = "";
   onTipChange(e);
 };
@@ -37,7 +40,7 @@ const updateDashboard = () => {
   const tipPerPerson = tip / numOfPeople;
   const moneyPerPerson = totalBill / numOfPeople;
 
-  const tipButtons = document.getElementsByClassName("btn-percent");
+  const tipButtons = document.getElementsByClassName("tip-button");
 
   for (let i = 0; i < tipButtons.length; i++) {
     if (parseInt(tipButtons[i].value) === tipPercentage) {
